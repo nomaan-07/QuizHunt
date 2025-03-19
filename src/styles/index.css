@@ -1,1 +1,12 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-roboto: 'Roboto Mono', monospace;
+}
+
+@utility container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}

@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router';
+import { Outlet } from "react-router";
 
 function AppLayout() {
   return (
-    <div>
+    <div className="font-roboto container">
       <Outlet />
     </div>
   );
