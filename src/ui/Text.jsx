@@ -5,7 +5,7 @@ const sizes = {
 };
 
 function Text({ children, size = "large" }) {
-  const styles = `text-emerald-900 ${sizes[size]}`;
+  const styles = `text-emerald-900 dark:text-emerald-200 ${sizes[size]}`;
 
   return <p className={styles}>{children}</p>;
 }
