@@ -1,4 +1,6 @@
-import DarkModeToggle from "../features/theme/DarkModeToggle";
+import DarkModeToggle from "../features/DarkModeToggle";
+import LanguageSwitch from "../features/LanguageSwitch";
+import { useTranslation } from "../hooks/useTranslation";
 import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 import Logo from "../ui/Logo";
@@ -10,17 +12,13 @@ function Homepage() {
       <div className="mx-auto w-fit">
         <Logo />
       </div>
-      <Heading>Welcome to Quiz Hunt!</Heading>
-      <Text size="large">
-        Test your knowledge with our fun and challenging quizzes!😉
-      </Text>
+      <Heading>{useTranslation("homepage.heading")}</Heading>
+      <Text size="large">{useTranslation("homepage.title")}</Text>
       <div className="flex items-center justify-center gap-4">
         <DarkModeToggle />
-        <Button variation="secondary" size="small">
-          Persian
-        </Button>
+        <LanguageSwitch />
       </div>
-      <Button to="/quiz">Let's Go</Button>
+      <Button to="/quiz">{useTranslation("common.letsGo")}</Button>
     </div>
   );
 }
