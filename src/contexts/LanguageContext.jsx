@@ -12,11 +12,11 @@ function LanguageProvider({ children }) {
 
   useEffect(() => {
     if (language === "fa-IR" || language === "fa") {
-      document.documentElement.lang = "fa";
-      document.documentElement.dir = "rtl";
+      document.documentElement.setAttribute("lang", "fa");
+      document.documentElement.setAttribute("dir", "rtl");
     } else {
-      document.documentElement.lang = "en";
-      document.documentElement.dir = "ltr";
+      document.documentElement.setAttribute("lang", "en");
+      document.documentElement.setAttribute("dir", "ltr");
     }
   }, [language]);
 
