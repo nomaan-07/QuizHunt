@@ -30,3 +30,14 @@
     @apply size-3 outline outline-offset-1 outline-pink-600;
   }
 }
+
+@utility progress-bar {
+  @apply h-2 w-full;
+
+  &::-webkit-progress-bar {
+    @apply rounded-full bg-slate-300;
+  }
+  &::-webkit-progress-value {
+    @apply h-full rounded-full bg-teal-500;
+  }
+}
