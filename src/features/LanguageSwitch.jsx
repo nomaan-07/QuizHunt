@@ -2,12 +2,14 @@ import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "../hooks/useTranslation";
 import Button from "../ui/Button";
 
-function LanguageSwitch() {
+function LanguageSwitch({ variation = "secondary" }) {
   const { switchLanguage } = useLanguage();
+  const translatedText = useTranslation("common.changeLanguage");
+  const transLatedLanguage = useTranslation("common.language");
 
   return (
-    <Button variation="secondary" size="small" onClick={switchLanguage}>
-      {useTranslation("common.changeLanguage")}
+    <Button variation={variation} size="small" onClick={switchLanguage}>
+      {variation === "header" ? transLatedLanguage : translatedText}
     </Button>
   );
 }

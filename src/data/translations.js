@@ -13,6 +13,7 @@ export const translations = {
     common: {
       letsGo: "Let's Go",
       changeLanguage: "Change to Persian",
+      language: "fa",
     },
   },
 
@@ -30,6 +31,7 @@ export const translations = {
     common: {
       letsGo: "بزن بریم",
       changeLanguage: "تغییر به انگلیسی",
+      language: "en",
     },
   },
 };

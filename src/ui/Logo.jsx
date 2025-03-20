@@ -1,8 +1,8 @@
 import { useDarkMode } from "../hooks/useDarkMode";
 
 const sizes = {
+  small: "w-20",
   large: "w-64",
-  small: "w-32",
 };
 
 function Logo({ size = "large" }) {
