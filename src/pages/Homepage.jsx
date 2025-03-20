@@ -8,17 +8,15 @@ import Text from "../ui/Text";
 
 function Homepage() {
   return (
-    <div className="space-y-12 text-center">
-      <div className="mx-auto w-fit">
-        <Logo />
-      </div>
+    <div className="container my-20 space-y-12 text-center">
+      <Logo />
       <Heading>{useTranslation("homepage.heading")}</Heading>
       <Text size="large">{useTranslation("homepage.title")}</Text>
       <div className="flex items-center justify-center gap-4">
         <DarkModeToggle />
         <LanguageSwitch />
       </div>
-      <Button to="/quiz">{useTranslation("common.letsGo")}</Button>
+      <Button to="app">{useTranslation("common.letsGo")}</Button>
     </div>
   );
 }

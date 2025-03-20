@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 
 import Homepage from "./pages/Homepage";
 import PageNotFound from "./pages/PageNotFound";
@@ -7,6 +7,7 @@ import Quiz from "./pages/Quiz";
 import AppLayout from "./ui/AppLayout";
 import { DarkModeProvider } from "./contexts/DarkModeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -14,12 +15,14 @@ function App() {
       <DarkModeProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<AppLayout />}>
-              <Route index element={<Homepage />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/results" element={<Results />} />
-              <Route path="*" element={<PageNotFound />} />
+            <Route index element={<Homepage />} />
+            <Route path="app" element={<AppLayout />}>
+              <Route index element={<Navigate replace to="settings" />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="quiz" element={<Quiz />} />
+              <Route path="results" element={<Results />} />
             </Route>
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>
       </DarkModeProvider>
