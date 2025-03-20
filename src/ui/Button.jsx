@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 
 const baseStyles =
-  "inline-block transition-all md:cursor-pointer rounded-full border-2 shadow-md dark:shadow-slate-700 md:hover:translate-y-px md:hover:shadow-none";
+  "block transition-all md:cursor-pointer rounded-full border-2 shadow-md dark:shadow-slate-700 md:hover:translate-y-px md:hover:shadow-none max-w-fit";
 
 const variations = {
   primary:
@@ -10,7 +10,7 @@ const variations = {
     "border-pink-900 bg-pink-700 text-pink-50 md:hover:bg-pink-800 dark:border-pink-500 dark:bg-pink-600 dark:text-pink-100 dark:md:hover:bg-pink-500",
   dark: "border-slate-900 bg-slate-700 text-slate-50 md:hover:bg-slate-800 dark:border-slate-500 dark:bg-slate-600 dark:text-slate-100 dark:md:hover:bg-slate-500",
   header:
-    "flex items-center justify-center size-8 transition-all md:cursor-pointer shadow border-slate-200 bg-slate-50 md:hover:bg-slate-100 dark:border-slate-500 dark:bg-slate-500 dark:text-slate-50 dark:md:hover:bg-slate-400",
+    "flex items-center justify-center size-10 transition-all md:cursor-pointer shadow border-slate-200 bg-slate-50 md:hover:bg-slate-100 dark:border-slate-500 dark:bg-slate-500 dark:text-slate-50 dark:md:hover:bg-slate-400 rounded-sm",
 };
 
 const sizes = {
@@ -24,11 +24,12 @@ function Button({
   variation = "primary",
   size = "large",
   onClick,
+  className = "",
 }) {
   const styles =
     variation === "header"
-      ? variations[variation]
-      : `${baseStyles} ${variations[variation]} ${sizes[size]}`;
+      ? `${variations[variation]} ${className}`
+      : `${baseStyles} ${variations[variation]} ${sizes[size]} ${className}`;
 
   if (to)
     return (

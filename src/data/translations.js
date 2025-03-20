@@ -5,6 +5,19 @@ export const translations = {
       title: "Test your knowledge with our fun and challenging quizzes!😉",
     },
 
+    settings: {
+      title: "Choose your preferred settings",
+      quizTypeTitle: "Choose the quiz",
+      quizNumberTitle: "Number of Questions:",
+    },
+
+    quizTypes: {
+      html: "HTML",
+      css: "CSS",
+      javascript: "Javascript",
+      react: "React",
+    },
+
     theme: {
       dark: "Dark Mode 🌛",
       light: "Light Mode 🌞",
@@ -14,6 +27,7 @@ export const translations = {
       letsGo: "Let's Go",
       changeLanguage: "Change to Persian",
       language: "fa",
+      startQuiz: "Start Quiz",
     },
   },
 
@@ -23,6 +37,18 @@ export const translations = {
       title: "دانش خودتو با سوالات سرگرم کننده و چالش برانگیز ما بسنج! 😉",
     },
 
+    settings: {
+      title: "تنظیمات دلخواهتو انتخاب کن",
+      quizTypeTitle: "آزمون رو انتخاب کن",
+      quizNumberTitle: "تعداد سوالات:",
+    },
+
+    quizTypes: {
+      html: "اچ‌تی‌ام‌ال",
+      css: "سی‌اس‌اس",
+      javascript: "جاوا‌اسکریپت",
+      react: "ری‌اکت",
+    },
     theme: {
       dark: "تم تیره 🌛",
       light: "تم روشن 🌞",
@@ -32,6 +58,7 @@ export const translations = {
       letsGo: "بزن بریم",
       changeLanguage: "تغییر به انگلیسی",
       language: "en",
+      startQuiz: "شروع آزمون",
     },
   },
 };

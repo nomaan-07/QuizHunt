@@ -5,13 +5,13 @@ import Logo from "./Logo";
 
 function Header() {
   return (
-    <div className="flex items-center justify-between gap-40 md:gap-80">
+    <header className="flex w-full items-center justify-between">
       <Logo size="small" />
       <div className="flex items-center gap-2">
         <DarkModeToggle variation="header" />
         <LanguageSwitch variation="header" />
       </div>
-    </div>
+    </header>
   );
 }
 

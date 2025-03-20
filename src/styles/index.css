@@ -16,3 +16,17 @@
   align-items: center;
   justify-content: center;
 }
+
+@utility range-input {
+  &:focus {
+    outline: none;
+  }
+
+  &[type="range"]::-webkit-slider-thumb {
+    @apply size-3.5 cursor-pointer appearance-none rounded-full bg-pink-600;
+  }
+
+  &[type="range"]:focus::-webkit-slider-thumb {
+    @apply size-3 outline outline-offset-1 outline-pink-600;
+  }
+}
