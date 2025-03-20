@@ -1,4 +1,4 @@
-import { useDarkMode } from "../hooks/useDarkMode";
+import { useSelector } from "react-redux";
 
 const sizes = {
   small: "w-20",
@@ -6,7 +6,7 @@ const sizes = {
 };
 
 function Logo({ size = "large" }) {
-  const { isDarkMode } = useDarkMode();
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
   const src = isDarkMode ? "/logo-dark.png" : "/logo-light.png";
 

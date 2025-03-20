@@ -13,10 +13,9 @@
           : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       const localLanguage = localStorage.getItem("language");
-      const parsedLanguage = localLanguage ? JSON.parse(localLanguage) : null;
 
       const language =
-        parsedLanguage === "fa" || parsedLanguage === "fa-IR" ? "fa" : "en";
+        localLanguage === "fa" || localLanguage === "fa-IR" ? "fa" : "en";
 
       if (isDarkMode) {
         document.documentElement.classList.add("dark");
