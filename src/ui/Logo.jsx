@@ -8,7 +8,7 @@ const sizes = {
 function Logo({ size = "large" }) {
   const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
 
-  const src = isDarkMode ? "/logo-dark.png" : "/logo-light.png";
+  const src = `${import.meta.env.BASE_URL}logo-${isDarkMode ? "dark" : "light"}.png`;
 
   return <img src={src} alt="Logo" className={sizes[size]} />;
 }
