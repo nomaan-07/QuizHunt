@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
 import { Provider } from "react-redux";
 
 import Homepage from "./pages/Homepage";
@@ -10,7 +10,7 @@ import Settings from "./pages/Settings";
 import store from "./store";
 import ErrorPage from "./pages/ErrorPage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Homepage />,
