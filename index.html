@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizHunt</title>
+    <script>
+      const localTheme = localStorage.getItem("isDarkMode");
+      const isDarkMode =
+        localTheme !== null
+          ? JSON.parse(localTheme)
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      const localLanguage = localStorage.getItem("language");
+
+      const language =
+        localLanguage === "fa" || localLanguage === "fa-IR" ? "fa" : "en";
+
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      document.documentElement.setAttribute(
+        "dir",
+        language === "en" ? "ltr" : "rtl",
+      );
+      document.documentElement.setAttribute("lang", language);
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/QuizHunt/assets/index-DHPKdqLI.js"></script>
+    <link rel="stylesheet" crossorigin href="/QuizHunt/assets/index-3nfPddV5.css">
+  </head>
+  <body
+    class="font-roboto bg-gradient-to-r from-indigo-200 to-emerald-200 text-sky-900 md:via-amber-100 rtl:font-sans dark:bg-gradient-to-r dark:from-indigo-950 dark:to-cyan-950 dark:text-sky-100 dark:md:via-teal-950"
+  >
+    <div id="root"></div>
+  </body>
+</html>
