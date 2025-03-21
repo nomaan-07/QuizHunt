@@ -1,9 +1,9 @@
 import Heading from "../ui/Heading";
-import Button from "../ui/Button";
 import QuizTypeSelector from "../features/settings/QuizTypeSelector";
 import QuestionNumberSelector from "../features/settings/QuestionNumberSelector";
 
 import { useTranslation } from "../hooks/useTranslation";
+import StartQuizButton from "../features/quiz/StartQuizButton";
 
 function Setting() {
   return (
@@ -11,9 +11,7 @@ function Setting() {
       <Heading type="h2">{useTranslation("settings.title")}</Heading>
       <QuizTypeSelector />
       <QuestionNumberSelector />
-      <Button className="mx-auto" to="/app/quiz">
-        {useTranslation("common.startQuiz")}
-      </Button>
+      <StartQuizButton />
     </>
   );
 }

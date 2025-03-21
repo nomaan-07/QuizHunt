@@ -1,13 +1,12 @@
-import Button from "../../ui/Button";
+import FinishQuizButton from "./FinishQuizButton";
+import NextQuizButton from "./NextQuizButton";
 
 function QuizFooter() {
   return (
-    <header className="flex items-center justify-between">
-      <Button size="small" to="/app/results" variation="secondary">
-        Finish Quiz
-      </Button>
-      <Button size="small">Next</Button>
-    </header>
+    <footer className="flex items-center justify-between">
+      <FinishQuizButton />
+      <NextQuizButton />
+    </footer>
   );
 }
 

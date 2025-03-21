@@ -20,7 +20,7 @@ const quizTypes = [
   {
     id: 3,
     name: "javascript",
-    icon: "js",
+    icon: "javascript",
     color: "bg-yellow-500",
   },
   {

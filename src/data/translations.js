@@ -3,6 +3,7 @@ export const translations = {
     homepage: {
       heading: "Welcome to Quiz Hunt!",
       title: "Test your knowledge with our fun and challenging quizzes!😉",
+      highScore: "Your highest score is",
     },
 
     settings: {
@@ -18,6 +19,16 @@ export const translations = {
       react: "React",
     },
 
+    errorPage: {
+      title: "Oops! Something went wrong. Please try again later.",
+      tryAgain: "Try Again",
+    },
+
+    pageNotFound: {
+      title: "Oops! Page not fount. 😔",
+      back: "Back to Home",
+    },
+
     theme: {
       dark: "Dark Mode 🌛",
       light: "Light Mode 🌞",
@@ -28,6 +39,11 @@ export const translations = {
       changeLanguage: "Change to Persian",
       language: "fa",
       startQuiz: "Start Quiz",
+      finishQuiz: "Finish Quiz",
+      restartQuiz: "Restart Quiz",
+      next: "next",
+      of: "of",
+      points: "points",
     },
   },
 
@@ -35,6 +51,7 @@ export const translations = {
     homepage: {
       heading: "خوش اومدی به کوییز هانت!",
       title: "دانش خودتو با سوالات سرگرم کننده و چالش برانگیز ما بسنج! 😉",
+      highScore: "بالاترین امتیازت:",
     },
 
     settings: {
@@ -49,6 +66,17 @@ export const translations = {
       javascript: "جاوا‌اسکریپت",
       react: "ری‌اکت",
     },
+
+    errorPage: {
+      title: "یه مشکلی پیش اومده! لطفا بعدا دوباره تلاش کن.",
+      tryAgain: "تلاش دوباره",
+    },
+
+    pageNotFound: {
+      title: "صفحه ای که دنبالش بودی رو پیدا نکردیم. 😔",
+      back: "برگشت به صفحه اصلی",
+    },
+
     theme: {
       dark: "تم تیره 🌛",
       light: "تم روشن 🌞",
@@ -59,6 +87,11 @@ export const translations = {
       changeLanguage: "تغییر به انگلیسی",
       language: "en",
       startQuiz: "شروع آزمون",
+      finishQuiz: "پایان آزمون",
+      restartQuiz: "شروع دوباره",
+      next: "بعدی",
+      of: "از",
+      points: "امتیاز",
     },
   },
 };
