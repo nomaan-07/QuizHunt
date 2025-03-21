@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 const sizes = {
   small: "w-20",
-  large: "w-64",
+  large: "w-48 md:w-64",
 };
 
 function Logo({ size = "large" }) {

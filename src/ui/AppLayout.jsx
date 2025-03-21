@@ -3,9 +3,9 @@ import Header from "./Header";
 
 function AppLayout() {
   return (
-    <div className="container my-20 w-178">
+    <div className="container my-20 w-full md:w-180">
       <Header />
-      <div className="mt-10 w-full space-y-14 rounded-xl bg-slate-50 p-7 dark:bg-cyan-900">
+      <div className="mt-10 w-full space-y-10 rounded-xl bg-slate-50 p-4 md:space-y-14 md:p-7 dark:bg-cyan-900">
         <Outlet />
       </div>
     </div>

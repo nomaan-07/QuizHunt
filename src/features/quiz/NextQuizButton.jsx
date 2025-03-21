@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
+
 import Button from "../../ui/Button";
+
 import { nextQuestion } from "../../slices/quizSlice";
 import { useTranslation } from "../../hooks/useTranslation";
 
@@ -11,22 +13,19 @@ function NextQuizButton() {
   const dispatch = useDispatch();
 
   const isLastQuestion = index + 1 === numQuestions;
+  const translatedText = useTranslation("common.next");
 
   function handleNextQuestion() {
     if (isLastQuestion) return;
     dispatch(nextQuestion());
   }
 
-  const translatedText = useTranslation("common.next");
+  if (!answer || isLastQuestion) return null;
 
   return (
-    <>
-      {answer && !isLastQuestion && (
-        <Button size="small" onClick={handleNextQuestion}>
-          {translatedText}
-        </Button>
-      )}
-    </>
+    <Button size="small" onClick={handleNextQuestion}>
+      {translatedText}
+    </Button>
   );
 }
 

@@ -1,5 +1,6 @@
 import LanguageOption from "./LanguageOption";
 import Heading from "../../ui/Heading";
+
 import { useTranslation } from "../../hooks/useTranslation";
 
 const quizTypes = [
@@ -32,10 +33,12 @@ const quizTypes = [
 ];
 
 function QuizTypeSelector() {
+  const translatedTitle = useTranslation("settings.quizTypeTitle");
+
   return (
     <div>
-      <Heading type="h3">{useTranslation("settings.quizTypeTitle")}</Heading>
-      <div className="mt-5 flex gap-8">
+      <Heading type="h3">{translatedTitle}</Heading>
+      <div className="mt-5 flex flex-wrap gap-8">
         {quizTypes.map((quiz) => (
           <LanguageOption quiz={quiz} key={quiz.id} />
         ))}

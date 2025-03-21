@@ -19,6 +19,17 @@ export const translations = {
       react: "React",
     },
 
+    result: {
+      title: "Your result in ",
+      recordBreak: "Congratulations you broke your record! 🎉🥳",
+      answered: "You answered",
+      outOf: "out of",
+      correctly: "questions correctly.",
+      pointsAchieved: "You achieved",
+      pointsOfTotal: "points of total",
+      pointsGot: "points.",
+    },
+
     errorPage: {
       title: "Oops! Something went wrong. Please try again later.",
       tryAgain: "Try Again",
@@ -65,6 +76,17 @@ export const translations = {
       css: "سی‌اس‌اس",
       javascript: "جاوا‌اسکریپت",
       react: "ری‌اکت",
+    },
+
+    result: {
+      title: "نتیجه آزمون ",
+      recordBreak: "تبریک میگم رکورد قبلیتو زدی 🎉🥳",
+      answered: "تو",
+      outOf: "سوال از",
+      correctly: "سوالو درست جواب دادی.",
+      pointsAchieved: "تو",
+      pointsOfTotal: "امتیاز از",
+      pointsGot: "امتیاز گرفتی.",
     },
 
     errorPage: {

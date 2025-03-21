@@ -9,16 +9,16 @@ function RestartQuizButton() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const translatedText = useTranslation("common.restartQuiz");
+
   function handleClick() {
     dispatch(restartQuiz());
-    setTimeout(() => {
-      navigate("/", { replace: true });
-    }, 0);
+    navigate("/", { replace: true });
   }
 
   return (
     <Button className="mx-auto" onClick={handleClick}>
-      {useTranslation("common.restartQuiz")}
+      {translatedText}
     </Button>
   );
 }

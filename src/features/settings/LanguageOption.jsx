@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useTranslation } from "../../hooks/useTranslation";
+
 import Icon from "../../ui/Icon";
 import Text from "../../ui/Text";
+
+import { useTranslation } from "../../hooks/useTranslation";
 import { changeQuizType } from "../../slices/quizSlice";
 
 function LanguageOption({ quiz }) {
@@ -11,7 +13,11 @@ function LanguageOption({ quiz }) {
 
   const dispatch = useDispatch();
 
-  const handleClick = () => dispatch(changeQuizType(name));
+  const translatedText = useTranslation(`quizTypes.${name}`);
+
+  function handleClick() {
+    dispatch(changeQuizType(name));
+  }
 
   return (
     <button
@@ -26,7 +32,7 @@ function LanguageOption({ quiz }) {
         size="small"
         className={`w-28 text-center text-slate-50 dark:text-slate-50 ${color}`}
       >
-        {useTranslation(`quizTypes.${name}`)}
+        {translatedText}
       </Text>
     </button>
   );

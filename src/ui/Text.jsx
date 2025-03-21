@@ -1,7 +1,7 @@
 const sizes = {
-  small: "",
-  medium: "text-lg",
-  large: "text-xl",
+  small: "text-sm md:text-base",
+  medium: "md:text-lg",
+  large: "text-lg md:text-xl",
 };
 
 function Text({ children, size = "large", className = "" }) {

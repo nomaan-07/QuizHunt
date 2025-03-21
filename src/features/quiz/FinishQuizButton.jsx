@@ -1,12 +1,16 @@
 import { useDispatch } from "react-redux";
-import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
-import { finishQuiz } from "../../slices/quizSlice";
+
+import Button from "../../ui/Button";
+
 import { useTranslation } from "../../hooks/useTranslation";
+import { finishQuiz } from "../../slices/quizSlice";
 
 function FinishQuizButton() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const translatedText = useTranslation("common.finishQuiz");
 
   function handleFinish() {
     dispatch(finishQuiz());
@@ -15,7 +19,7 @@ function FinishQuizButton() {
 
   return (
     <Button size="small" onClick={handleFinish} variation="secondary">
-      {useTranslation("common.finishQuiz")}
+      {translatedText}
     </Button>
   );
 }

@@ -1,7 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useTranslation } from "../hooks/useTranslation";
-import Button from "../ui/Button";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import Button from "../ui/Button";
+
+import { useTranslation } from "../hooks/useTranslation";
 import { switchLanguage } from "../slices/languageSlice";
 
 function LanguageSwitch({ variation = "secondary" }) {
@@ -12,7 +14,7 @@ function LanguageSwitch({ variation = "secondary" }) {
   const transLatedLanguage = useTranslation("common.language");
 
   useEffect(() => {
-    if (language === "fa-IR" || language === "fa") {
+    if (language.startsWith("fa")) {
       document.documentElement.setAttribute("lang", "fa");
       document.documentElement.setAttribute("dir", "rtl");
       localStorage.setItem("language", "fa");

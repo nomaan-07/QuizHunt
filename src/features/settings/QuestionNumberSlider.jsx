@@ -20,6 +20,7 @@ function QuestionNumberSlider() {
         max={maxNumQuestions}
         value={numQuestions}
         onChange={handleChange}
+        aria-label="Select number of questions"
         className="range-input h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-400"
       ></input>
     </>

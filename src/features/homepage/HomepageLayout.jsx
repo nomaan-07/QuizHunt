@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useTranslation } from "../../hooks/useTranslation";
+
 import Button from "../../ui/Button";
 import Heading from "../../ui/Heading";
 import Logo from "../../ui/Logo";
@@ -7,25 +7,35 @@ import Text from "../../ui/Text";
 import DarkModeToggle from "../DarkModeToggle";
 import LanguageSwitch from "../LanguageSwitch";
 
+import { useTranslation } from "../../hooks/useTranslation";
+
 function HomepageLayout() {
   const highScore = useSelector((state) => state.quiz.highScore);
 
-  const highScoreText = useTranslation("homepage.highScore");
+  const translations = {
+    heading: useTranslation("homepage.heading"),
+    title: useTranslation("homepage.title"),
+    highScore: useTranslation("homepage.highScore"),
+    letsGo: useTranslation("common.letsGo"),
+  };
+
   return (
-    <div className="container my-20 space-y-12 text-center">
+    <div className="container my-20 space-y-8 text-center md:space-y-12">
       <Logo />
-      <Heading>{useTranslation("homepage.heading")}</Heading>
-      <Text size="large">{useTranslation("homepage.title")}</Text>
+      <Heading>{translations.heading}</Heading>
+      <Text size="large">{translations.title}</Text>
+
       {highScore > 0 && (
         <Text size="medium">
-          {highScoreText} <strong>{highScore}</strong>
+          {translations.highScore} <strong>{highScore}</strong>
         </Text>
       )}
-      <div className="flex items-center justify-center gap-4">
+
+      <div className="flex flex-col items-center justify-center gap-8 sm:flex-row sm:gap-4">
         <DarkModeToggle />
         <LanguageSwitch />
       </div>
-      <Button to="app">{useTranslation("common.letsGo")}</Button>
+      <Button to="/app">{translations.letsGo}</Button>
     </div>
   );
 }
