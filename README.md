@@ -117,4 +117,10 @@ Built with **React, Tailwind CSS, Redux, and React Router**, it offers a smooth 
 
 ---
 
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
 💡 **Developed with ❤️ by Nomaan**
